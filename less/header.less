@@ -1,0 +1,194 @@
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: @primary-color;
+    padding: 0 30px;
+    position: relative;
+    z-index: 9999;
+
+    .logo img {
+        height: 50px;
+        max-height: 100%;
+        width: auto;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+    }
+
+    #mainMenu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li {
+            position: relative;
+
+            a {
+                font-size: 14px;
+                display: block;
+                padding: 14px 20px;
+                color: @primary-text-color;
+                text-decoration: none;
+                text-transform: uppercase;
+                line-height: 1.6;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: @secondary-color;
+                }
+            }
+
+            /* Menú desplegable */
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: @dropdown-color;
+                min-width: 180px;
+                padding: 0;
+                text-align: left;
+                z-index: 1001;
+                box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+
+                li {
+                    display: block;
+
+                    a {
+                        padding: 10px 16px;
+                        color: @primary-text-color;
+                        text-decoration: none;
+
+                        &:hover {
+                            background-color: @dropdown-secondary-color;
+                        }
+                    }
+                }
+            }
+
+            &:hover .dropdown-menu {
+                display: block;
+            }
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 10px;
+        color: @primary-text-color;
+        transition: transform 0.3s ease;
+        
+        &:focus {
+            outline: 2px solid @dropdown-color;
+        }
+
+        .hamburger {
+            display: inline;
+        }
+        
+        .close {
+            display: none;
+        }
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: #breaks[desktop]){
+    .navbar {
+        justify-content: space-between;
+        padding: 0 15px;
+        flex-wrap: wrap;
+
+        #mainMenu {
+            flex-direction: column;
+            width: 100%;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: @secondary-text-color;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, opacity 0.3s ease;
+            opacity: 0;
+
+            li {
+                width: 100%;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+
+                a {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                }
+
+                .dropdown-menu {
+                    position: static;
+                    width: 100%;
+                    box-shadow: none;
+                    display: none;
+                    background-color: lighten(@dropdown-color, 10%);
+                    
+                    li a {
+                        padding-left: 30px;
+                    }
+                }
+
+                &:hover .dropdown-menu {
+                    display: none;
+                }
+            }
+
+            &.active {
+                display: flex;
+                max-height: 1000px;
+                opacity: 1;
+                animation: fadeIn 0.4s ease;
+            }
+        }
+
+        .menu-toggle {
+            display: block;
+            
+            &.active {
+                .hamburger {
+                    display: none;
+                }
+                
+                .close {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+/**/
+@media (min-width: #breaks[tablet]){
+    .navbar {
+        .logo img {
+            height: 40px;
+        }
+
+        #mainMenu li a {
+            font-size: 14px;
+            padding: 12px 20px;
+        }
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
