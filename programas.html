@@ -12,9 +12,12 @@
     
     <main>
         {{>npCuerpo}}
-        {{#each programasData}}
-            {{>cardsProgramas this}}
-        {{/each}}
+        <section class="cardsGallery">
+            {{#each programasData}}
+                {{>cardsProgramas this}}
+            {{/each}}
+        </section>
+
     </main>   
 
 </body>

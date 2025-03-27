@@ -1,17 +1,53 @@
 main{
+    background-color: rgb(199, 197, 197);
     position: relative;
     .title{
-        background-color: @dropdown-color;
+        background-color: darken(@dropdown-color, 7%);
         display: flex;
+        align-items: center;
         justify-content: center;
+        flex-direction: column;
+        color: @primary-color;
+        padding-bottom: 2rem;
+        
+        
         hr{
-            border: 2rem;
+            border-top: 5px solid @primary-color;
+            border-radius: 10px;
+            width: 35vh;
         }
     }
-    
+
     
 
     .card{
         background-color: @primary-color;
+        box-shadow: 2rem 2rem 2rem gray;
+        overflow: hidden;
+        position: relative;
+        margin: 2rem;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 100%;
+        @media(min-width:#breaks[tablet]){
+            width: 300px;
+        }
+        .cardTitle{
+            position: relative;
+        }
+        .cardDsc{
+            position: relative;
+            width: auto;
+            height: auto;
+        }
     }
+
+}
+
+.cardsGallery{
+    margin-top: 1rem;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
