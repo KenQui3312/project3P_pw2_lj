@@ -1,9 +1,13 @@
 main{
-    background-color: rgb(199, 197, 197);
     position: relative;
+    background-image: url("../media/colibri.jpg");
+    background-attachment: fixed;
 
+    @media(max-width:#breaks[desktop]){
+        background-position: center center;
+    }
     .title{
-        background-color: darken(@dropdown-color, 10%);
+        background-color: fadeout(rgb(139, 139, 139),50%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -13,18 +17,19 @@ main{
         
         
         hr{
-            border-top: 5px solid @primary-color;
+            border: 2px solid lighten(@dropdown-color,10%);
+            box-shadow: 2px 2px 2px rgb(27, 27, 27);
             border-radius: 10px;
-            width: 35vh;
-            box-shadow: 6px 6px 6px rgb(66, 66, 66);
+            width: 20vh;
         }
     }
 
     
 
     .card{
+        
         background-color: @primary-color;
-        box-shadow: 2rem 2rem 2rem gray;
+        box-shadow: 1rem 1rem 1rem rgb(53, 53, 53);
         overflow: hidden;
         position: relative;
         margin: 2rem;
@@ -47,8 +52,10 @@ main{
         }
         .cardTitle{
             position: relative;
+            color: @dropdown-color;
         }
         .cardDsc{
+            color: rgb(122, 121, 121);
             position: relative;
             width: auto;
             height: auto;
@@ -58,9 +65,11 @@ main{
 }
 
 .cardsGallery{
+    
     margin-top: 1rem;
     display:flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    padding-bottom: 5rem;
 }
