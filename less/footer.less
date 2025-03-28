@@ -11,7 +11,7 @@ footer {
   .logoFooter {
     overflow: hidden;
     object-fit: cover;
-    @media(max-width:#breaks[desktop]){
+    @media(min-width:#breaks[tablet]){
       width: 30%;
       object-fit: contain;
     }
@@ -32,8 +32,8 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media(max-width:#breaks[desktop]){
-          margin-left: 4rem;
+        @media(min-width:#breaks[tablet]){
+          margin-left: 1rem;
         }
         @media(min-width:#breaks[desktop]){
           margin-left: 10rem;
