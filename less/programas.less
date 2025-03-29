@@ -1,11 +1,6 @@
 main{
     position: relative;
-    background-image: url("../media/colibri.jpg");
-    background-attachment: fixed;
 
-    @media(max-width:#breaks[desktop]){
-        background-position: center center;
-    }
     .title{
         background-color: fadeout(rgb(148, 147, 147),50%);
         display: flex;
@@ -14,9 +9,9 @@ main{
         flex-direction: column;
         color: @primary-color;
         padding-bottom: 2rem;
+        font-size: 1.5rem;
         
-        
-        hr{
+        .bar{
             border: 2px solid lighten(@dropdown-color,10%);
             box-shadow: 2px 2px 2px rgb(82, 80, 80);
             border-radius: 10px;

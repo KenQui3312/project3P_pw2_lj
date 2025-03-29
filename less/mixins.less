@@ -1,0 +1,40 @@
+.backgroundImgColibri{
+    background-image: url("../media/colibri.jpg");
+    background-attachment: fixed;
+
+    @media(max-width:#breaks[desktop]){
+        background-position: center center;
+    }
+}
+.backgroundImgGuara{
+    background-image: url("../media/guaraRoja.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media(max-width:#breaks[desktop]){
+        background-position: center center;
+    }
+}
+
+.negritas{
+    font-weight: bold;
+}
+
+.bar{
+    border: 2px solid lighten(@dropdown-color,10%);
+    box-shadow: 2px 2px 2px rgb(82, 80, 80);
+    border-radius: 10px;
+    width: 20vh;
+}
+
+.title{
+    background-color: fadeout(rgb(107, 105, 105),10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: @primary-color;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    
+}
