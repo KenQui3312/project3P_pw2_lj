@@ -2,7 +2,8 @@ import { navigation } from "./common/navigation"
 
 import { index as indexPageData} from "./pages/index"
 import {programas as progPageData} from "./pages/programas"
-
+import {equipo as equipoPageData} from "./pages/equipos"
+import {comites as comitesData} from "./pages/comites"
 
 
 export const getPageContext = (pagePath)=>{
@@ -20,6 +21,12 @@ export const getPageContext = (pagePath)=>{
         case '/programas.html':
             pageVariables = progPageData
             break;
+        case '/equipos.html':           
+            pageVariables = equipoPageData
+            break;
+        case '/comites.html':           
+            pageVariables = comitesData
+        break;
     }
     const finalContext = {
         ...commonVariables,

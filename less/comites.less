@@ -1,0 +1,130 @@
+main {
+    position: relative;
+    background-image: url("../media/colibri-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+ 
+    @media(max-width:#breaks[desktop]){
+        background-position: center center;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 3rem;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2E7D32;
+            margin: 0;
+        }
+        
+        hr {
+            border: none;
+            height: 3px;
+            background-color: #2E7D32;
+            width: 200px;
+            margin: 1rem auto;
+        }
+    }
+}
+
+.comites-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.comite-section {
+    margin-bottom: 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    
+    .comite-header {
+        background-color: #2E7D32;
+        color: white;
+        padding: 1.2rem;
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+    
+    .comite-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        
+        @media (max-width: #breaks[tablet]) {
+            flex-direction: column;
+        }
+        
+        .comite-descripcion {
+            flex: 1;
+            color: #333;
+            line-height: 1.6;
+            padding-right: 2rem;
+            font-size: 1.05rem;
+            
+            @media (max-width: #breaks[tablet]) {
+                padding-right: 0;
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        .integrantes-section {
+            flex: 1;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 5px solid #2E7D32;
+            
+            .integrantes-title {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                color: #2E7D32;
+            }
+            
+            .coordinador {
+                margin-bottom: 1.2rem;
+                font-weight: 500;
+                color: #333;
+                
+                a {
+                    color: #1E88E5;
+                    text-decoration: none;
+                    font-weight: bold;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                        color: darken(#1E88E5, 10%);
+                    }
+                }
+            }
+            
+            ul {
+                list-style-type: disc;
+                padding-left: 1.5rem;
+                margin-left: 0.5rem;
+                color: #555;
+                
+                li {
+                    margin-bottom: 0.6rem;
+                }
+            }
+        }
+    }
+}

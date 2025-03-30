@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos y Aliados - ASHO</title>
+    <link rel="stylesheet" href="./less/main.less">
+</head>
+<body>
+    {{>header}}
+    
+    <main>
+        <section class="equipoTitle">
+            <h1>Consejo Directivo</h1>
+            <hr>
+        </section>
+        
+        <section class="cardsGallery">
+            {{#each equipoData.consejo}}
+                {{>cardsEquipo this}}
+            {{/each}}
+        </section>
+    </main>   
+    
+    {{>footer}}
+
+</body>
+</html>

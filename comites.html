@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comités de Trabajo - ASHO</title>
+    <link rel="stylesheet" href="./less/main.less">
+</head>
+<body>
+ 
+    {{>header}}
+ 
+    <main>
+        <div class="title">
+            <h1>Comités de trabajo</h1>
+            <hr>
+        </div>
+        
+        <section class="comites-container">
+            {{#each comitesData}}
+                {{>cardsComites this}}
+            {{/each}}
+        </section>
+ 
+    </main>  
+    {{>footer}}
+</body>
+</html>
