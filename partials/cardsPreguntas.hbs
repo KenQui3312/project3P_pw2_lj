@@ -1,0 +1,20 @@
+<div class="pregunta-section">
+    <div class="pregunta-header">
+        <h2>{{pregunta}}</h2>
+    </div>
+    <div class="pregunta-respuesta">
+        <p>{{respuesta}}</p>
+        {{#if referencias}}
+            <div class="referencias-section">
+                <h3>Referencias</h3>
+                <ul>
+                    {{#each referencias}}
+                        <li>
+                            <a href="{{enlace}}" target="_blank">{{texto}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+    </div>
+</div>

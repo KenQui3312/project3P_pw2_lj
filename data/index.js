@@ -4,7 +4,7 @@ import { index as indexPageData} from "./pages/index"
 import {programas as progPageData} from "./pages/programas"
 import {equipo as equipoPageData} from "./pages/equipos"
 import {comites as comitesData} from "./pages/comites"
-
+import {preguntas as preguntasData} from "./pages/preguntas"
 
 export const getPageContext = (pagePath)=>{
     console.log("Page to Load Context:", pagePath)
@@ -26,6 +26,9 @@ export const getPageContext = (pagePath)=>{
             break;
         case '/comites.html':           
             pageVariables = comitesData
+        break;
+        case '/preguntas.html':           
+            pageVariables = preguntasData
         break;
     }
     const finalContext = {
