@@ -1,26 +1,6 @@
 main{
     position: relative;
 
-    .title{
-        background-color: fadeout(rgb(148, 147, 147),50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: @primary-color;
-        padding-bottom: 2rem;
-        font-size: 1.5rem;
-        
-        .bar{
-            border: 2px solid lighten(@dropdown-color,10%);
-            box-shadow: 2px 2px 2px rgb(82, 80, 80);
-            border-radius: 10px;
-            width: 20vh;
-        }
-    }
-
-    
-
     .card{
         
         background-color: @primary-color;
@@ -38,7 +18,7 @@ main{
             height: 30%;
         }
         @media(min-width:#breaks[tablet]){
-            width: 400px;
+            width: 470px;
             
             img{
                 height: 45%;
@@ -48,12 +28,14 @@ main{
         .cardTitle{
             position: relative;
             color: @dropdown-color;
+            font-size: 1.5rem;
         }
         .cardDsc{
             color: rgb(122, 121, 121);
             position: relative;
             width: auto;
             height: auto;
+            font-size: 1.2rem;
         }
     }
 

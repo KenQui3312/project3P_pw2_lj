@@ -1,23 +1,86 @@
-main{
-    .donacionContainer{
-        position: relative;
-
-        section{
-            background-color: fadeout(@primary-color,10%);
-            .donacionInfo{
+.donarMain {
+    position: relative;
+    .donarContainer{
+        padding: 2rem;
+        background-color: fadeout(@primary-color, 10%);
+        .donacionInfo{
+            h2{
+                font-size: 2rem;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                color: darken(@dropdown-color,10%);
+                font-size: 2rem;
+            }
+        }
+        .metodosDonacion {
+            p{
+                color: rgb(15, 15, 167);
+                font-size: 2rem;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+    
+            }
+            .montos{
                 display: flex;
+                justify-content: space-between;
                 flex-direction: column;
-                align-items: center;
-            }
-            .metodosDonacion{
-
-            }
-            .donacionDsc{
-                p{
-                    margin: 0px;
+                @media(min-width:#breaks[tablet]){
+                    flex-direction: row;
                 }
+                li{
+                    margin: 1.5rem;
+                    justify-content: center;
+                    
+                    @media(min-width:#breaks[tablet]){
+                        flex-direction: row;
+                        padding: 0rem 1rem 0rem 1rem;
+                    }
+                    @media(min-width:#breaks[desktop]){
+                        flex-direction: row;
+                        padding: 0rem 6rem 0rem 6rem;
+                    }
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        
+                        color: @dropdown-color;
+                        background-color: rgb(15, 15, 167);
+                        padding: 1rem;
+                        border-radius: 10px;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        &:hover{
+                            color: @primary-color;
+                            transition: all 0.3s ease-in;
+                        }
+                    }
+                }
+            }
+            ul{
+                li{
+                    font-size: 1.2rem;
+                }
+            }
+            padding-bottom: 1rem;
+        }
+        .donacionDsc {
+            @media(min-width:#breaks[tablet]){
+                padding: 0rem 25% 0rem 25%;
+                width: 50%;
+            }
+
+            p{
+                font-size: 1.2rem;
+                margin: 0px;
             }
         }
     }
 
 }
+
