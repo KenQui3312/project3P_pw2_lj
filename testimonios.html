@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="./less/main.less">
+</head>
+<body>
+    {{>header}}
+
+    <main>
+        <ul>
+            {{#each images}}
+                <li>
+                    <img src="{{this.url}}" alt="{{this.title}}" />
+                    <p>{{this.title}}</p>
+                    <p>{{this.description}}</p>
+                </li>
+            {{/each}}
+        </ul>
+        {{>testimonios}}
+    </main>
+
+    {{>footer}}
+</body>
+</html>

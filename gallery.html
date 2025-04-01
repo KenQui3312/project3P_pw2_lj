@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Aves</title>
+    <link rel="stylesheet" href="less/main.less">
+</head>
+<body>
+    {{> header }}
+    <main >  
+        <section class="gallery">
+            {{#each images}}
+                {{>gallery this}}
+            {{/each}}
+        </section>
+    </main>
+    {{> footer }}
+</body>
+</html>
