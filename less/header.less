@@ -3,8 +3,8 @@ body{
     margin: 0px;
 }
 
+/* Barra de navegación */
 .navbar {
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +39,7 @@ body{
                 font-size: 14px;
                 display: block;
                 padding: 14px 20px;
-                color: @primary-color;
+                color: @primary-text-color;
                 text-decoration: none;
                 text-transform: uppercase;
                 line-height: 1.6;
@@ -52,7 +52,7 @@ body{
 
             /* Menú desplegable */
             .dropdown-menu {
-
+                
                 display: none;
                 position: absolute;
                 top: 100%;
@@ -69,11 +69,11 @@ body{
 
                     a {
                         padding: 10px 16px;
-                        color: @primary-color;
+                        color: @primary-text-color;
                         text-decoration: none;
 
                         &:hover {
-                            background-color: darken(@dropdown-color,10%);
+                            background-color: @dropdown-secondary-color;
                         }
                     }
                 }
