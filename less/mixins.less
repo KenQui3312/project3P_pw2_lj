@@ -39,3 +39,16 @@
     font-size: 1.5rem;
 
 }
+
+/* =============================================MIXINS============================================= */
+.transition-all(@duration: @transition-speed) {
+  transition: all @duration ease;
+}
+
+.transform(@params) {
+  transform: @params;
+}
+
+.box-shadow(@params) {
+  box-shadow: @params;
+}
