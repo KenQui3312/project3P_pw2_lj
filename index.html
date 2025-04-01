@@ -1,18 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./less/main.less">
-    <title>Proyecto Tercer Parcial PW2</title>
-  </head>
 
-  <body>
-    {{> header}}
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./less/main.less">
+  <title>Proyecto Tercer Parcial PW2</title>
+</head>
 
-    </main>
-    <!-- Carga los scripts al final del body -->
-    <script src="./data/nav.js"></script>
-  </body>
+<body>
+  {{> header}}
+  <main>
+    {{> sliderinicio}}
+    <br>
+    <section class="text-section">
+      <div class="text-description">
+        <p>Honduras es el hogar de una rica comunidad de aves silvestres, con más de 770 especies, la mayoría residentes
+          permanentes, y algunas 200 visitantes migratorias. Hay más de 580 sitios de importancia para la observación de
+          aves (<span style="text-decoration: underline;"><a
+              href="https://ebird.org/hotspots?env.minX=-89.350792&amp;env.minY=12.98454&amp;env.maxX=-82.405693&amp;env.maxY=17.418473&amp;yr=all&amp;m="
+              target="_blank" rel="noopener">visitarlos en eBird</a></span>), y observadores de aves han publicado
+          decenas de miles de fotos de ellas en sitios de ciencia ciudadana como<a
+            href="https://ebird.org/media/catalog?sort=rating_rank_desc&amp;region=Honduras%20(HN)&amp;regionCode=HN"
+            target="_blank" rel="noopener"><span style="text-decoration: underline;"> eBird</span></a> e <a
+            href="https://www.inaturalist.org/projects/aves-de-honduras-honduras-birds" target="_blank"
+            rel="noopener"><span style="text-decoration: underline;">iNaturalist</span></a>. Aves Honduras anima a sus
+          miembros a documentar las aves y subir sus fotos a estos sitios. También invitamos al público a aprender de
+          las aves, participando en giras guiadas o en actividades de nuestros <span
+            style="text-decoration: underline;"><a href="https://aveshonduras.org/clubes/" target="_blank"
+              rel="noopener">clubes de observación de aves</a></span>. Promovemos el aviturismo como una estrategia para
+          fomentar la conservación de las aves, la biodiversidad y los ecosistemas naturales de Honduras.</p>
+      </div>
+    </section>
+    <section class="pilares-section">
+      <h2 class="section-title">PILARES</h2>
+      <section class="cardsGalleryIndex">
+        {{#each pilares}}
+        {{> inicioImgcards this}}
+        {{/each}}
+      </section>
+    </section>
+
+    <br>
+    <section class="about-section">
+      <div class="container">
+        <div class="about-text">
+          <h2 class="section-title">Más de 14 años trabajando por las aves en Honduras</h2>
+          <p>La Asociación Hondureña de Ornitología, nace el 17 de julio de 2010, como una iniciativa de biólogos,
+            observadores de aves, fotógrafos y conservacionistas, con el fin de promover la investigación científica y
+            conservación de las aves de Honduras; además busca incentivar el turismo de observación de aves y fomentar
+            la educación ambiental entre los hondureños.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://aveshonduras.org/wp-content/uploads/2021/08/grupo_Parque-Experimental-San-Juan.jpg"
+            alt="Asociación Hondureña de Ornitología" class="responsive-image">
+        </div>
+      </div>
+    </section>
+  </main>
+  {{>footer}}
+  <!-- Carga los scripts al final del body -->
+  <script src="/data/nav.js"></script>
+  <script src="/data/pages/index.js" type="module"></script>
+  <script type="module">
+    import SliderController from '/data/pages/index.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      new SliderController();
+    });
+  </script>
+</body>
+
 </html>
