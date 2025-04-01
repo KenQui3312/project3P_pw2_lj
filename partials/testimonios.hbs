@@ -1,0 +1,14 @@
+<section class="testimonios-container">
+  {{#each testimonios}}
+    <div class="testimonio-card">
+      <img src="{{this.foto}}" alt="Foto de {{this.nombre}}" class="foto-testimonio">
+      <div class="contenido-testimonio">
+        <h3>{{this.nombre}}</h3>
+        <p class="comentario">"{{this.comentario}}"</p>
+        <p class="ubicacion">📍 {{this.ubicacion}}</p>
+      </div>
+    </div>
+  {{/each}}
+</section>
+
+
