@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./less/main.less">
+    <title>Proyecto Tercer Parcial PW2</title>
+</head>
+
+<body>
+    {{> header}}
+    <main>
+        <section class="hero-pilaresC">
+            <h2 class="section-title">Calendario</h2>
+        </section>
+        <section class="about-sectionP">
+            <div class="container">
+                <div class="about-textP">
+                    <h2 class="section-titleP">Actividades del mes actual</h2>
+                    <p>Aves Honduras (ASHO) coordina docenas de actividades cada año, entre giras informales de
+                        observación de aves, <a href="https://aveshonduras.org/paquetes-turisticos/" target="_blank"
+                            rel="noopener"><span style="text-decoration: underline;">giras formales con guías
+                                profesionales</span></a>, charlas educativas, conteos y censos de aves. Puedes buscarlas
+                        en nuestro calendario y estar pendiente de los anuncios de nuevas actividades en nuestras redes
+                        sociales. Te recomendamos seguir también las redes de los <a
+                            href="https://aveshonduras.org/clubes/" target="_blank" rel="noopener"><span
+                                style="text-decoration: underline;">clubes de observaciones de aves</span></a>
+                        &nbsp;afiliados a la asociación y presentes en tu región.</p>
+                </div>
+            </div>
+        </section>
+        <section class="pilares-section">
+            <section class="cardsGalleryIndex">
+                <iframe
+                src="https://calendar.google.com/calendar/embed?src=c18f97bc851449e3e12beb7a1275591713b9bcd969053e6b12f54b293812e94c%40group.calendar.google.com&ctz=America%2FTegucigalpa"
+                style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </section>
+        </section>
+        <section class="about-sectionP">
+            <div class="container">
+                <div class="about-textP">
+                    <h2 class="section-titleP">Calendario de Giras Members Only</h2>
+                    <p>Las Giras Members Only son eventos exclusivos de observación de aves en los santuarios Aves Honduras. Participar en estas giras te permitirá deleitarte con la riqueza natural de estos maravillosos sitios, contribuir al enriquecimiento de sus inventarios de aves y disfrutar de los servicios que cada santuario ofrece. ¡Consulta nuestro calendario y vive una experiencia inolvidable!</p>
+                </div>
+            </div>
+        </section>
+        <div class="about-image">
+            <img src="https://aveshonduras.org/wp-content/uploads/2025/02/Redes-Calendario-AVES-819x1024.png" alt="Asociación Hondureña de Ornitología" class="responsive-image">
+        </div>
+        
+    </main>
+    {{>footer}}
+    <!--Carga los scripts al final del body-->
+    <script src="/data/nav.js"></script>
+
+</body>
+
+</html>
