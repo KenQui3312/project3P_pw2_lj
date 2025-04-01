@@ -1,0 +1,95 @@
+.testimonios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+  
+    .testimonio-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      }
+  
+      &::before {
+        content: "🦜";
+        font-size: 2.5rem;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        opacity:0.5;
+      }
+  
+      .foto-testimonio {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #4dd0e1;
+        margin: 0 auto 1rem auto;
+        display: block;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+  
+      h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #00796b;
+      }
+  
+      .comentario {
+        margin: 1rem 0;
+        font-style: italic;
+        color: #333;
+        line-height: 1.5;
+        position: relative;
+  
+        &::before,
+        &::after {
+          content: '';
+          font-size: 2rem;
+          color: #26a69a;
+        }
+  
+        &::before {
+          position: absolute;
+          left: -10px;
+          top: -10px;
+        }
+  
+        &::after {
+          position: absolute;
+          right: -10px;
+          bottom: -10px;
+        }
+      }
+  
+      .ubicacion {
+        font-size: 0.95rem;
+        color: #555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+  
+        &::before {
+          content: "📍";
+        }
+      }
+    }
+  }
+  
+
+
