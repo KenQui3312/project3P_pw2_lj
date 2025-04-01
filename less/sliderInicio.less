@@ -1,0 +1,197 @@
+/* =============================================   SLIDER COMPONENT FIXED STYLES   ============================================= */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90vh;
+    z-index: 1;
+
+    .frametrack {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        will-change: transform;
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            flex-shrink: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+    .navigation-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.navigate-left {
+            left: 20px;
+        }
+
+        &.navigate-right {
+            right: 20px;
+        }
+
+        &:hover {
+            background: rgba(0,0,0,0.8);
+        }
+    }
+
+    .navigation-container {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 100;
+
+        .navigation-index {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+
+            &.active {
+                background: white;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .slider {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 60vh;
+    }
+}
+
+/* =============================================SLIDER OVERLAY STYLES============================================= */
+   .slider-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    
+    .slider-text-content {
+        max-width: 1200px;
+        width: 90%;
+        padding: 2rem;
+        color: @primary-color;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        pointer-events: auto;
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            
+            @media (min-width:#breaks[tablet]) {
+                font-size: 2rem;
+            }
+            
+            @media (max-width: #breaks[tablet]) {
+                font-size: 1.5rem;
+            }
+        }
+        
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            
+            @media (max-width: #breaks[tablet]) {
+                font-size: 1rem;
+            }
+        }
+    }
+    
+    .slider-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        
+        .btn-slider {
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            .transition-all();
+            pointer-events: auto;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: @primary-color;
+            .box-shadow(0 2px 5px rgba(0,0,0,0.2));
+            
+            &:hover {
+                .transform(scale(1.05));
+                .box-shadow(0 3px 8px rgba(0,0,0,0.3));
+            }
+            
+            /* Botón VER SANTUARIOS - Verde */
+            &:nth-child(1) {
+                background: linear-gradient(135deg, #4CAF50, #2E7D32);
+                &:hover {
+                    background: linear-gradient(135deg, #2E7D32, #4CAF50);
+                }
+            }
+            
+            /* Botón DONAR - Rojo */
+            &:nth-child(2) {
+                background: linear-gradient(135deg, #F44336, #C62828);
+                &:hover {
+                    background: linear-gradient(135deg, #C62828, #F44336);
+                }
+            }
+            
+            /* Botón ÚNETE - Azul */
+            &:nth-child(3) {
+                background: linear-gradient(135deg, #2196F3, #1565C0);
+                &:hover {
+                    background: linear-gradient(135deg, #1565C0, #2196F3);
+                }
+            }
+            
+            @media (max-width: #breaks[tablet]) {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
