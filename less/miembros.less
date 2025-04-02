@@ -1,0 +1,189 @@
+@breaks: {
+    desktop: 1024px;
+    tablet: 768px;
+    mobile: 480px;
+};
+
+.miembrosPage {
+    position: relative;
+    background-image: url("../media/ave.jpg"); 
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 3rem 1.5rem;
+    min-height: 100vh;
+ 
+    @media(max-width:@breaks[desktop]){
+        background-position: center center;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 3rem;
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: none;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0;
+        }
+        
+        hr {
+            border: none;
+            height: 3px;
+            background-color: #2E7D32;
+            width: 200px;
+            margin: 1rem auto;
+        }
+    }
+}
+
+.miembros-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    
+    @media (max-width: @breaks[tablet]) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.miembro-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    .miembro-header {
+        background-color: #2E7D32;
+        color: white;
+        padding: 1rem;
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    
+    .miembro-content {
+        padding: 1.5rem;
+        
+        .miembro-imagen {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            
+            img {
+                max-width: 200px;
+                max-height: 120px;
+                object-fit: contain;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+        
+        .miembro-info {
+            .miembro-descripcion {
+                color: #333;
+                line-height: 1.5;
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
+                max-height: 180px;
+                overflow-y: auto;
+                padding-right: 0.5rem;
+                
+                &::-webkit-scrollbar {
+                    width: 6px;
+                }
+                
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                    border-radius: 10px;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    background: #2E7D32;
+                    border-radius: 10px;
+                }
+            }
+            
+            .miembro-contacto {
+                background-color: #f8f8f8;
+                border-radius: 8px;
+                padding: 1rem;
+                border-left: 5px solid #2E7D32;
+                
+                h3 {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    color: #2E7D32;
+                    margin-top: 0;
+                    margin-bottom: 0.8rem;
+                }
+                
+                ul {
+                    list-style-type: none;
+                    padding-left: 0;
+                    margin: 0;
+                    
+                    li {
+                        margin-bottom: 0.5rem;
+                        font-size: 0.9rem;
+                        color: #555;
+                        display: flex;
+                        align-items: center;
+                        
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        
+                        a {
+                            color: #1E88E5;
+                            text-decoration: none;
+                            
+                            &:hover {
+                                text-decoration: underline;
+                                color: darken(#1E88E5, 10%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @breaks[mobile]) {
+    .miembro-card {
+        .miembro-content {
+            padding: 1rem;
+            
+            .miembro-imagen {
+                img {
+                    max-width: 150px;
+                }
+            }
+            
+            .miembro-info {
+                .miembro-descripcion {
+                    max-height: 150px;
+                }
+            }
+        }
+    }
+}

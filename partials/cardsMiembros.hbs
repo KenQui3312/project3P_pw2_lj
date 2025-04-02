@@ -1,0 +1,26 @@
+<div class="miembro-card">
+    <div class="miembro-header">
+        <h2>{{nombre}}</h2>
+    </div>
+    <div class="miembro-content">
+        <div class="miembro-imagen">
+            <img src="{{imagen}}" alt="{{nombre}}">
+        </div>
+        <div class="miembro-info">
+            <div class="miembro-descripcion">
+                <p>{{descripcion}}</p>
+            </div>
+            <div class="miembro-contacto">
+                <h3>Contacto</h3>
+                <ul>
+                    {{#each contacto}}
+                        <li>
+                            <i class="contacto-icon"></i>
+                            {{this}}
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

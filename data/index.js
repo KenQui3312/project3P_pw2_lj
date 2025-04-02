@@ -7,6 +7,7 @@ import {comites as comitesData} from "./pages/comites"
 import {preguntas as preguntasData} from "./pages/preguntas"
 import {gallery as galleryPageData} from "./pages/gallery"
 import {testimonios as testimoniosPageData} from "./pages/testimonios"
+import {miembros as miembrosData} from "./pages/miembros"
 
 export const getPageContext = (pagePath)=>{
     console.log("Page to Load Context:", pagePath)
@@ -37,7 +38,10 @@ export const getPageContext = (pagePath)=>{
             break;
         case '/testimonios.html':           
             pageVariables = testimoniosPageData
-        break;
+            break;
+        case '/miembros.html':           
+            pageVariables = miembrosData
+    break;
     }
     const finalContext = {
         ...commonVariables,
