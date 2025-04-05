@@ -41,7 +41,8 @@ export const getPageContext = (pagePath)=>{
             break;
         case '/miembros.html':           
             pageVariables = miembrosData
-    break;
+        break;
+
     }
     const finalContext = {
         ...commonVariables,
