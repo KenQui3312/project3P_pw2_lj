@@ -1,10 +1,3 @@
-@primaryt-color: #149818;
-@secondary-color: #15a008;
-@border-color: #e7e7e7;
-@button-bg: #e7e7e7;
-@button-hover-bg: #30d630;
-@text-color: #ffffff;
-@font-family: 'Quicksand', sans-serif;
 
 
 .background-image {
@@ -18,10 +11,14 @@
     z-index: -1;
 }
 
+.content{
+    color: @text-color;
+}
+
 body {
 
     background: #ffffff;
-    color: @text-color;
+    
     line-height: 1.6;
     font-family: @font-family;
     padding: 0;
@@ -31,6 +28,7 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 1.5em;
+    
 }
 
 ul {
@@ -80,6 +78,7 @@ ul {
 
         .block {
             grid-column: 1 / 3;
+            
         }
 
         button,
@@ -98,6 +97,7 @@ ul {
             background: @button-bg;
             border: 0;
             text-transform: uppercase;
+            color: darken(@text-color,50%);
             padding: 1em;
 
             &:hover,
