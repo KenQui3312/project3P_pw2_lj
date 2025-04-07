@@ -1,5 +1,5 @@
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
     const mainMenu = document.getElementById("mainMenu");
     const hamburger = document.querySelector(".hamburger");
