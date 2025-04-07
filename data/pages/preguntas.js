@@ -44,7 +44,7 @@ export const preguntas = {
         referencias: [
           {
             texto: "Guía de Sitios para Observación de Aves en Honduras",
-            enlace: "https://hondurasbirding.com"
+            enlace: "https://choosehonduras.com/where-1"
           }
         ]
       },
