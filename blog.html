@@ -15,9 +15,11 @@
             <h1>Asociación Hondureña de Ornitología</h1>
             <p>Promueve la investigación científica y conservación de las aves.</p>
         </div>
-        {{#each cardsBlog}}
-            {{>blog this}}
-        {{/each}}
+        <div class="heropanel">
+            {{#each cardsBlog}}
+                {{>blog this}}
+            {{/each}}
+        </div>
         
     </main>
     {{>footer}}

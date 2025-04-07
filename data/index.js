@@ -7,7 +7,7 @@ import {preguntas as preguntasData} from "./pages/preguntas"
 import {gallery as galleryPageData} from "./pages/gallery"
 import {testimonios as testimoniosPageData} from "./pages/testimonios"
 import {miembros as miembrosData} from "./pages/miembros"
-//import {blog as blogPageData} from "./pages/blog"
+import {blog as blogPageData} from "./pages/blog"
 
 export const getPageContext = (pagePath)=>{
     console.log("Page to Load Context:", pagePath)
@@ -38,6 +38,9 @@ export const getPageContext = (pagePath)=>{
             break;
         case '/miembros.html':           
             pageVariables = miembrosData
+        break;
+        case '/blog.html':           
+            pageVariables = blogPageData
         break;
  
 
