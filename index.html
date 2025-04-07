@@ -60,14 +60,14 @@
   </main>
   {{>footer}}
   <!-- Carga los scripts al final del body -->
-  <script src="/data/nav.js"></script>
-  <script src="/data/pages/index.js" type="module"></script>
   <script type="module">
     import SliderController from '/data/pages/index.js';
     document.addEventListener('DOMContentLoaded', () => {
       new SliderController();
     });
   </script>
+  <link rel="stylesheet" href="./data/common/navigation.js">
+
 </body>
 
 </html>

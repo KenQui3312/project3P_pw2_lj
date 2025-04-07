@@ -1,4 +1,3 @@
-import { navigation } from "./common/navigation"
 
 import { index as indexPageData} from "./pages/index"
 import {programas as progPageData} from "./pages/programas"
@@ -8,12 +7,10 @@ import {preguntas as preguntasData} from "./pages/preguntas"
 import {gallery as galleryPageData} from "./pages/gallery"
 import {testimonios as testimoniosPageData} from "./pages/testimonios"
 import {miembros as miembrosData} from "./pages/miembros"
+//import {blog as blogPageData} from "./pages/blog"
 
 export const getPageContext = (pagePath)=>{
     console.log("Page to Load Context:", pagePath)
-    const commonVariables = {
-        ...navigation
-    }
 
     let pageVariables = {};
     console.log("Page been loaded:", pagePath);
@@ -42,10 +39,10 @@ export const getPageContext = (pagePath)=>{
         case '/miembros.html':           
             pageVariables = miembrosData
         break;
+ 
 
     }
     const finalContext = {
-        ...commonVariables,
         ...pageVariables
     }
     //console.log("Context: ", JSON.stringify(finalContext, null, 2));
