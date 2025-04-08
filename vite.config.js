@@ -4,6 +4,7 @@ import * as glob from 'glob';
 import htmlPurge from 'vite-plugin-purgecss';
 import handlebars from 'vite-plugin-handlebars';
 import { getPageContext } from "./data";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 const obtenerEntradasHTML = ()=>{
     return Object.fromEntries(
@@ -36,7 +37,15 @@ export default defineConfig({
             context: getPageContext
 
         }),
-        htmlPurge({})
+        htmlPurge({}),
+        viteStaticCopy({
+            targets:[
+                {
+                    src:'data/nav.js',
+                    dest: 'data'
+                }
+            ]
+        })
     ]
 
 });

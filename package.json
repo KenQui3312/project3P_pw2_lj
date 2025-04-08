@@ -13,7 +13,8 @@
     "less": "^4.2.2",
     "vite": "^6.2.3",
     "vite-plugin-handlebars": "^2.0.0",
-    "vite-plugin-purgecss": "^0.2.13"
+    "vite-plugin-purgecss": "^0.2.13",
+    "vite-plugin-static-copy": "^2.3.0"
   },
   "dependencies": {
     "handlebars": "^4.7.8"
